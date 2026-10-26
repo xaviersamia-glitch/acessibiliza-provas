@@ -14,7 +14,7 @@ const TIPOS = {
  4:{nome:"Prova adaptada 4",curto:"Avaliação individualizada",desc:"Condições ou deficiências de maior gravidade. A avaliação é pensada de forma totalmente individualizada e pode prescindir de mecanismos formais.",
    itens:["Prova totalmente individualizada, voltada para os objetivos do PEI","Adequação à idade mental do estudante","Avaliação processual","Avaliação oral","Ferramentas de condução (caixas de texto, figuras, imagens)","Trabalhar assuntos de interesse pessoal do estudante"]}
 };
-/* Barreiras observadas (e-book): descrevem a necessidade, não o diagnóstico */
+/* Barreiras observadas: descrevem a necessidade, não o diagnóstico */
 const BARREIRAS = [
  {id:"atencao",rot:"Atenção sustentada e organização",cap:"TDAH",
   est:["Dividir a prova em seções menores para evitar sobrecarga","Destacar informações-chave com negrito ou cores","Uma instrução por vez; evitar comandos longos","Tempo extra, se necessário","Possibilidade de realizar a prova oralmente ou com apoio visual"]},
@@ -602,14 +602,14 @@ function vPerfil(){
    ${t!==1?`<p class="small muted" style="margin:10px 0 0">Adaptações de forma e condições (tipo 1) podem ser combinadas: use “Formatação da prova” e “Condições de aplicação” abaixo.</p>`:""}
   </fieldset>
   <fieldset><legend>Barreiras observadas</legend>
-   <p class="small muted" style="margin:0 0 8px">Marque o que o estudante concretamente apresenta. A referência entre parênteses indica o capítulo do e-book que trata do tema; ela não precisa ser registrada.</p>
+   <p class="small muted" style="margin:0 0 8px">Marque o que o estudante concretamente apresenta. A indicação entre parênteses é apenas orientativa e não precisa ser registrada.</p>
    <div class="checks">${BARREIRAS.map(b=>`<label><input type="checkbox" class="br" data-b="${b.id}" ${S.barreiras.includes(b.id)?"checked":""}><span>${esc(b.rot)} <span class="muted small">(${esc(b.cap)})</span></span></label>`).join("")}</div>
   </fieldset>
   ${S.barreiras.includes("visao")?`<fieldset><legend>Acesso visual</legend><div class="checks">
     <label><input type="radio" name="vis" value="baixa" ${S.fmt.visao==="baixa"?"checked":""}><span><b>Baixa visão</b>: fonte e imagens ampliadas, contraste, descrição como apoio</span></label>
     <label><input type="radio" name="vis" value="cegueira" ${S.fmt.visao==="cegueira"?"checked":""}><span><b>Cegueira</b>: ledor, leitor de tela ou Braille; descrição obrigatória de imagens e gráficos; tabelas em texto linear</span></label></div>
     ${S.fmt.visao==="cegueira"?'<p class="small muted" style="margin:8px 0 0">Para transcrição em Braille, envie ao transcritor o arquivo Word com as descrições e as tabelas linearizadas. Gráficos podem ser convertidos em tabela de dados com “Descrever com IA”. Fórmulas recebem leitura por extenso quando a adaptação é feita com IA.</p>':""}</fieldset>`:""}
-  ${sel.length?`<div class="card"><div class="eyebrow" style="margin-bottom:8px">Estratégias sugeridas pelo e-book</div><div class="tips">${sel.map(b=>`<div class="tip"><b>${esc(b.rot)}</b><ul>${b.est.map(e=>`<li>${esc(e)}</li>`).join("")}</ul></div>`).join("")}</div></div>`:""}
+  ${sel.length?`<div class="card"><div class="eyebrow" style="margin-bottom:8px">Estratégias sugeridas</div><div class="tips">${sel.map(b=>`<div class="tip"><b>${esc(b.rot)}</b><ul>${b.est.map(e=>`<li>${esc(e)}</li>`).join("")}</ul></div>`).join("")}</div></div>`:""}
   <div class="grid g2">
   <fieldset><legend>Formatação da prova</legend><div class="grid g2">
     <label class="f" for="f_fonte">Fonte<select id="f_fonte">${["Arial","Verdana","Calibri","Tahoma","OpenDyslexic"].map(f=>`<option ${S.fmt.fonte===f?"selected":""}>${f}</option>`).join("")}</select></label>
