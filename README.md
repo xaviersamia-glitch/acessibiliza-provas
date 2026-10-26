@@ -9,7 +9,7 @@ A aplicação funciona inteiramente no navegador, sem servidor e sem cadastro. O
 - Importação de provas em **Word (.docx)**, com imagens, tabelas, índices, expoentes e equações do editor do Word; em **PDF** (texto) e por colagem de texto.
 - Identificação automática de questões e alternativas, com indicadores de pontos de atenção (enunciado longo, mais de um comando, comando negativo, imagens, tabelas e fórmulas).
 - Aplicação dos **quatro tipos de prova adaptada** previstos nas orientações do NAPNE.
-- Registro de **barreiras observadas**, sem nome nem diagnóstico, com as estratégias correspondentes do e-book *Educação inclusiva na prática*.
+- Registro de **barreiras observadas**, sem nome nem diagnóstico, com as estratégias pedagógicas correspondentes.
 - Regras automáticas: destaque de verbos de comando e negações, separação de comandos e redução de alternativas.
 - Uso de inteligência artificial em modo prompt (ChatGPT, Claude ou Gemini), com comandos que já incluem as orientações institucionais.
 - Barra de símbolos para **Matemática, Física e Química**, com índices e expoentes.
@@ -50,7 +50,6 @@ O site é publicado pelo GitHub Pages a partir da branch `main`, pasta raiz (**S
 ## Referências pedagógicas
 
 - Colégio Pedro II. NAPNE. *Orientações gerais para adaptações de materiais e avaliações de estudantes com necessidades específicas.*
-- THOMÉ, Monique Ferreira Guedes; FORTUNATO, Francisca Sâmia Xavier. *Educação inclusiva na prática: um guia para professores.*
 - BRASIL. Lei nº 13.146/2015 (Lei Brasileira de Inclusão).
 
 As orientações são norteadoras. O docente mantém autonomia para decidir o tipo e o modo de adaptação, e a ferramenta não substitui o PEI nem a análise pedagógica.
