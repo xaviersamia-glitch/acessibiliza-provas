@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Acessibiliza Provas</title>
+<meta name="description" content="Acessibiliza Provas: proposta de ferramenta de apoio ao AEE / NAPNE do Colégio Pedro II para adaptação de avaliações de estudantes com necessidades específicas.">
+<link rel="icon" type="image/png" href="brasao.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,700&display=swap">
+<link rel="stylesheet" href="app.css">
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo principal</a>
+<header class="top"><div class="top-in">
+  <img src="brasao.png" alt="Brasão do Colégio Pedro II">
+  <div class="brand"><span class="inst">Colégio Pedro II</span><b>Acessibiliza Provas</b><span class="sub">Adaptação de avaliações · Atendimento Educacional Especializado</span></div>
+  <div class="sp"></div>
+  <span class="badge">AEE / NAPNE</span>
+  <span class="ai-pill" id="aiPill">IA: modo prompt</span>
+</div><div class="faixa"></div></header>
+
+<div class="shell">
+  <nav aria-label="Etapas">
+    <ol class="steps" id="steps"></ol>
+    <div class="side-note">Rascunho salvo automaticamente neste navegador. Não registre nome, laudo ou diagnóstico do estudante.</div>
+  </nav>
+  <main id="main" tabindex="-1"><div id="view"></div>
+    <div class="foot">Referências: <i>Orientações gerais para adaptações de materiais e avaliações de estudantes com necessidades específicas</i> (NAPNE · Colégio Pedro II) e <i>Educação inclusiva na prática: um guia para professores</i> (Thomé; Fortunato). As orientações são norteadoras: o docente tem autonomia para decidir o tipo e o modo de adaptação.<br>Proposta de ferramenta de apoio ao AEE / NAPNE do Colégio Pedro II, elaborada por Profa. Francisca Sâmia Xavier Fortunato. Não substitui o PEI nem a análise pedagógica do docente.</div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="docx.iife.js"></script>
+<script src="jszip.min.js"></script>
+<script src="mammoth.browser.min.js"></script>
+<script type="module" src="pdf.worker.mjs"></script>
+<script type="module" src="pdf.mjs"></script>
+<script src="app.js"></script>
+</body>
+</html>
